@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: 
+    "portada inicio"
+    "sb sbd"
+    "esp img"
+    "galeria ropa"
+    "cont info"
+    ;
+    font-family: 'Poppins', sans-serif;
+}
+
+.izquierda{
+    background-color: #fdfd96;
+    padding: 30px;
+}
+
+.izquierda.portada{
+    grid-area: portada;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    height: 100vh;
+    gap: 20px;
+}
+
+.izquierda .titulo{
+    font-size: 87px;
+}
+
+.arrow{
+    text-decoration: none;
+    color: black;
+    font-size: 50px;
+    position: relative;
+}
+
+.arrow:hover{  
+    top: 10px;
+}
+
+.subtitulo{
+    font-size: 20px;
+    text-align: center;
+}
+
+.derecha{
+    grid-area: der;
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+.derecha.inicio{
+    grid-area: inicio;
+    background-image: url(../IMG/model.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.izquierda.sb{
+    grid-area: sb;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.derecha.descripcion{
+    grid-area: sbd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.izquierda.espacio{
+    grid-area: esp;
+    height: 500px;
+}
+
+.derecha.imagen{
+    grid-area: img;
+    background-image: url(../IMG/model_dos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+.izquierda.galeria{
+    grid-area: galeria;
+}
+
+.derecha.ropa{
+    grid-area: ropa;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.foto{
+    border: 2px solid #000;
+    padding: 10px 10px 30px 10px;
+}
+
+.uno,
+.dos,
+.cuatro{
+    width: 100%;
+    height: 800px;
+}
+
+.tres,
+.cinco{
+    width: 100%;
+    height: 500px;
+}
+
+.seis{
+    width: 100%;
+    height: 600px;
+}
+
+.izquierda.contacto{
+    grid-area: cont;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.izquierda.contacto .subtitulo,
+.izquierda.contacto .titulo,
+.izquierda.contacto address{
+    text-align: right;
+}
+
+.red{
+    margin: 0 auto;
+}
+
+.red_social{
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+    margin: 20px;
+    transition: all 0.6s;
+}
+
+.red_social:hover{
+    color: #575757;
+    font-size: 32px;
+}
+
+.derecha.informacion{
+    grid-area: info;
+}
+
+.derecha.informacion form{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "nombre email"
+    "comentario comentario"
+    "enviar enviar"
+    ;
+}
+
+.nom,
+.e{
+    margin: 20px auto;
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 2px solid #777777;
+}
+
+.nom{
+    grid-area: nombre;
+}
+
+.e{
+    grid-area: email;
+}
+
+.mensaje{
+    grid-area: comentario;
+    margin: 0 auto;
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 2px solid rgb(119, 119, 119);
+}
+
+.submit{
+    grid-area: enviar;
+    background-color: #fdfd96;
+    margin: 20px auto;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 15px 15px 50px rgba(0,0,0,0.5);
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.6s;
+}
+
+.submit:hover{
+    box-shadow: 15px 15px 50px rgba(0,0,0,0);
+}
+
+@media (max-width: 850px){
+    .izquierda.contacto .titulo,
+    .izquierda.portada .titulo{
+        font-size: 50px;
+    }
+    .red_social{
+        font-size: 26px;
+    }
+    
+    .red_social:hover{
+        color: #575757;
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 650px){
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    .izquierda.espacio{
+        display: none;
+    }
+
+    .uno,
+    .dos,
+    .cuatro{
+        width: 100%;
+        height: 400px;
+    }
+
+    .tres,
+    .cinco{
+        width: 100%;
+        height: 300px;
+    }
+
+    .seis{
+        width: 100%;
+        height: 300px;
+    }
+}
