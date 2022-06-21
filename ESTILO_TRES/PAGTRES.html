@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PAGTRES.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>ESTILO 3</title>
+</head>
+<body>
+    <header>
+        <img src="../IMG/logo_pixel.png" alt="LOGO GANDEL" id="logo">
+        <nav>
+            <ul id="nav">
+                <li><a href="#"><img src="img/home_icon.png" alt="icon home" class="icons"></a></li>
+                <li><a href="#about"><img src="img/about_icon.png" alt="icon about" class="icons"></a></li>
+                <li><a href="#shop"><img src="img/shop_icon.png" alt="icon shop" class="icons"></a></li>
+                <li><a href="#info"><img src="img/info_icon.png" alt="icon info" class="icons"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="title">GAME WORLD</h1>
+        <p class="welcome">WELCOME USER</p>
+    </main>
+
+    <a name="about"></a>
+    <section>
+        <h2 class="subtitle">ABOUT ME</h2>
+        <div class="about" data-aos="fade-up"
+        data-aos-anchor-placement="top-center">
+            <img src="../IMG/gandel_black.png" alt="LOGO GANDEL" id="img_about">
+            <p id="info_about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, repudiandae recusandae cupiditate iure quia totam deserunt placeat. Dolor tempora ad perferendis esse fugit obcaecati amet, optio aut reprehenderit! Laboriosam, deserunt?</p>
+        </div>
+    </section>
+
+    <a name="shop"></a>
+    <section id="shop">
+        <div class="shopGalery" data-aos="flip-left">
+            <img src="img/pcOne.png" alt="PRODUCT IMAGE" class="imgProduct">
+            <p class="nameProduct">PC GAMER</p>
+            <a href="#" class="price">99 $</a>
+        </div>
+        <div class="shopGalery" data-aos="flip-left">
+            <img src="img/consolaOne.png" alt="PRODUCT IMAGE" class="imgProduct">
+            <p class="nameProduct">CONSOLE</p>
+            <a href="#" class="price">99 $</a>
+        </div>
+        <div class="shopGalery" data-aos="flip-left">
+            <img src="img/componentsOne.png" alt="PRODUCT IMAGE" class="imgProduct">
+            <p class="nameProduct">COMPONENTS</p>
+            <a href="#" class="price">99 $</a>
+        </div>
+    </section>
+
+    <section id="shopMore">
+        <a href="#" id="more" data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom">MORE PRODUCTS...</a>
+    </section>
+    
+    <a name="info"></a>
+    <footer>
+        <div id="infoFooter">
+            <img id="logoFooter" src="../IMG/logo_gandel.png">
+            <h3 id="infoTitle">CONTACT</h3>
+            <p id="infoDesc">Av. America entre Av. Potosi <br><br> +591 65330533 <br><br> gandel.devs@gmail.com</p>
+        </div>
+        <div id="rs">
+            <a href="#" class="redSocial whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" class="redSocial facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="redSocial instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="redSocial twitter"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 2000
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/29c1e4f1ef.js" crossorigin="anonymous"></script>
+</body>
+</html>

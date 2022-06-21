@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*, ::after, ::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    background: url("img/portada.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: auto;
+    font-family: 'Press Start 2P', cursive;
+    margin-left: 80px;
+}
+
+header{
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 80px;
+    height: 100vh;
+}
+
+#logo{
+    width: 64px;
+    height: 64px;
+}
+
+.icons{
+    height: 32px;
+    width: 32px;
+    margin: 20px auto;
+}
+
+.icons:hover{
+    height: 40px;
+    width: 40px;
+}
+
+nav{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 450px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #5a069681;
+    height: inherit;
+}
+
+.title{
+    color: #ffffff;
+    margin: 20px 0;
+    border-bottom: 2px solid #ffffff;
+    text-align: center;
+    font-size: 80px;
+    padding: 0 30px;
+}
+
+.welcome{
+    font-size: 26px;
+    color: #ffffff;
+}
+
+section{
+    background-color: #ffffff;
+    padding: 40px;
+}
+
+.subtitle{
+    color: #5a0696;
+    border-bottom: 2px solid #5a0696;
+    margin: auto;
+    text-align: center;
+    font-size: 36px;
+}
+
+.about{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#info_about{
+    text-align: justify;
+}
+
+#shop{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60vh;
+}
+
+.shopGalery{
+    background-color: #ffffff;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imgProduct{
+    width: 250px;
+    height: auto;
+}
+
+.price{
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #5a0696;
+    border: 2px solid #5a0696;
+    padding: 10px 20px;
+    transition: all 0.5s;
+}
+
+.price:hover{
+    background-color: #5a0696;
+    color: #ffffff;
+}
+
+#shopMore{
+    background-color: transparent;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#more{
+    text-decoration: none;
+    color: #5a0696;
+    margin: auto;
+    text-align: center;
+    border: 2px solid #5a0696;
+    padding: 20px 40px;
+}
+
+#more:hover{
+    background-color: #5a0696;
+    color: #ffffff;
+}
+
+footer{
+    background-color: #000000;
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "description redSocial"
+    ;
+}
+
+#infoFooter{
+    grid-area: description;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logoFooter{
+    height: 300px;
+    width: 300px;
+}
+
+#infoTitle{
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#infoDesc{
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+#rs{
+    grid-area: redSocial;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 50% 50%;
+    grid-template-areas: 
+    "whatsapp facebook"
+    "instagram twitter"
+    ;
+}
+
+.redSocial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.redSocial.whatsapp{
+    grid-area: whatsapp;
+}
+
+.redSocial.whatsapp:hover{
+    background-color: #00a300;
+}
+
+.redSocial.facebook{
+    grid-area: facebook;
+}
+
+.redSocial.facebook:hover{
+    background-color: #001263;
+}
+
+.redSocial.instagram{
+    grid-area: instagram;
+}
+
+.redSocial.instagram:hover{
+    background-color: #8f00d1;
+}
+
+.redSocial.twitter{
+    grid-area: twitter;
+}
+
+.redSocial.twitter:hover{
+    background-color: #00aad4;
+}
+
+@media (max-width: 1100px){
+    #shop{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        gap: 20px;
+    }
+
+    #shopMore{
+        height: auto;
+        width: 100%;
+        margin: 40px 0;
+    }
+
+    #more{
+        text-decoration: none;
+        color: #5a0696;
+        margin: auto;
+        text-align: center;
+        border: 2px solid #5a0696;
+        padding: 20px 40px;
+    }
+}
+
+@media (max-width: 1000px){
+    .about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    footer{
+        background-color: #000000;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #rs{
+        display: block;
+        width: 100%;
+    }
+
+    .redSocial{
+        font-size: 40px;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 800px){
+    body{
+        margin-left: 0;
+    }
+    
+    header{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 150px;
+    }
+
+    .title{
+        color: #ffffff;
+        margin: 20px 0;
+        border-bottom: 2px solid #ffffff;
+        text-align: center;
+        font-size: 40px;
+        padding: 0 20px;
+    }
+
+    .welcome{
+        font-size: 20px;
+        color: #ffffff;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #nav{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #img_about{
+        width: 300px;
+        height: 300px;
+    }
+
+    .imgProduct{
+        width: 150px;
+        height: auto;
+    }
+
+    #logoFooter{
+        height: 150px;
+        width: 150px;
+    }
+    
+    #infoTitle{
+        color: #ffffff;
+        font-size: 16px;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    #infoDesc{
+        text-align: center;
+        color: #ffffff;
+        font-size: 12px;
+    }
+
+    .redSocial{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        text-decoration: none;
+        color: #ffffff;
+    }
+}
