@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    cursor: url(img/pizzaMouse.png), auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #ffffff99;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #F5A31A;
+}
+
+body {
+    font-family: 'Righteous', cursive;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header button {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.lines {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px auto;
+}
+
+.nameEnterprise {
+    font-size: 70px;
+    color: #fff;
+    animation: brillito 10s linear infinite;
+}
+
+nav {
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menuOption {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+.menuOption:hover {
+    animation: saltito 1s linear;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/imgOne.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.title {
+    color: #fff;
+    font-size: 100px;
+}
+
+.descMain {
+    color: #fff;
+    font-size: 20px;
+}
+
+.productsContainer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+        "pizza soda"
+    ;
+}
+
+.products {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.products img {
+    width: 400px;
+    height: 400px;
+    
+}
+
+.products:hover img {
+    position: relative;
+    animation: movidita 0.4s linear;
+}
+
+.products.pizza {
+    grid-area: pizza;
+    background-color: #D32626;
+}
+
+.products.soda {
+    grid-area: soda;
+    background-color: #F5A31A;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.subtitle {
+    font-size: 30px;
+    margin: 30px 0;
+    text-shadow: 2px 2px 2px #F5A31A,
+        4px 4px 2px #D32626;
+}
+
+.imgContainer {
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.imgGallery {
+    width: 300px;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imgGallery.one {
+    background-image: url(img/imgTwo.jpg);
+}
+
+.imgGallery.two {
+    background-image: url(img/imgThree.jpg);
+}
+
+.imgGallery.three {
+    background-image: url(img/imgFour.jpg);
+}
+
+footer {
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.subtitle.two {
+    color: #fff;
+}
+
+.containerContact {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: 30px 0;
+    color: #fff;
+    font-size: 20px;
+}
+
+.redesSociales {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.redes {
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+}
+
+/*ANIMACIONES*/
+
+@keyframes girito {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-90deg);
+    }
+
+    50% {
+        transform: rotate(-180deg);
+    }
+
+    75% {
+        transform: rotate(-270deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+
+}
+
+@keyframes movidita {
+    0% {
+        left: 0;
+    }
+
+    25% {
+        left: -20px;
+    }
+
+    50% {
+        left: 0;
+    }
+
+    75% {
+        left: 20px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes iluminacion {
+    0% {
+        opacity: 25%;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    100% {
+        opacity: 25%;
+    }
+}
+
+@keyframes saltito {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: -10px;
+        text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #ffa200,
+            0 0 82px #F5A31A,
+            0 0 92px #ff0000,
+            0 0 102px #e91414,
+            0 0 151px #D32626;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes brillito {
+
+    0% {
+        text-shadow: none;
+    }
+
+    20% {
+        text-shadow: 6px 6px 2px #F5A31A;
+    }
+
+    40% {
+        text-shadow: 6px 6px 2px #F5A31A,
+            12px 12px 2px #D32626;
+    }
+
+    60% {
+        text-shadow: 6px 6px 2px #F5A31A,
+            12px 12px 2px #D32626;
+    }
+
+    80% {
+        text-shadow: 6px 6px 2px #F5A31A;
+    }
+
+    100% {
+        text-shadow: none;
+    }
+
+}
+
+@media (max-width: 1280px) {
+
+    .nameEnterprise {
+        font-size: 50px;
+    }
+
+    nav {
+        width: 600px;
+    }
+
+}
+
+@media (max-width: 1000px){
+
+    header{
+        position: fixed;
+        z-index: 1000;
+        transition: all 0.5s;
+    }
+    
+    header.active{
+        background-color: #F5A31A;
+    }
+
+    header button {
+        display: block;
+    }
+    
+    nav {
+        height: 330px;
+        width: 100%;
+        background-color: #F5A31A;
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        z-index: 1000;
+        transition: all 0.5s;
+    }
+
+    nav.active{
+        display: block;
+    }
+    
+    .menuOption {
+        width: 100%;
+        display: block;
+        color: #ff0000;
+        text-shadow: 2px 2px 2px #000;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .menuOption:hover {
+        background-color: #f8c265;
+        animation: none;
+    }
+
+    .productsContainer {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "pizza pizza"
+            "soda soda"
+        ;
+    }
+
+}
+
+@media (max-width: 900px){
+    .imgContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .containerContact {
+        margin: 0;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .redesSociales {
+        height: 40px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .redes {
+        text-decoration: none;
+        color: #fff;
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 580px){
+    .nameEnterprise {
+        font-size: 40px;
+        color: #fff;
+        animation: brillito 10s linear infinite;
+    }
+
+    .title {
+        color: #fff;
+        font-size: 60px;
+    }
+    
+    .descMain {
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .products {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .products img {
+        width: 300px;
+        height: 300px;
+        
+    }
+
+    .info{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 450px){
+    .nameEnterprise {
+        font-size: 30px;
+    }
+
+    .title {
+        color: #fff;
+        font-size: 40px;
+    }
+    
+    .descMain {
+        color: #fff;
+        font-size: 12px;
+    }
+
+    .products {
+        width: 100%;
+        height: 300px;
+    }
+
+    .products img {
+        width: 250px;
+        height: 250px;
+        
+    }
+
+    .imgGallery {
+        width: 250px;
+        height: 250px;
+    }
+
+}
