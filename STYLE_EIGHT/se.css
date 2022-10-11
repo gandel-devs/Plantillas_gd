@@ -1,0 +1,764 @@
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: #fff;
+}
+
+header {
+    position: fixed;
+    background-color: #2E279D;
+    color: #fff;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10000;
+}
+
+.btnMenu {
+    background-color: transparent;
+    width: 60px;
+    height: 60px;
+    border: none;
+}
+
+.btnMenu .line {
+    display: block;
+    background-color: #fff;
+    width: 40px;
+    height: 5px;
+    margin: 8px auto;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #2E279D;
+    width: 0;
+    height: 100vh;
+}
+
+.menu .options {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu.active {
+    display: block;
+    width: 300px;
+    overflow-y: hidden;
+}
+
+.optionMenu {
+    text-decoration: none;
+    color: #DFF6F0;
+}
+
+main {
+    background-image: url(img/sky.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas:
+        "bgMain descMain"
+    ;
+}
+
+.coverMain {
+    grid-area: bgMain;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 80px;
+    z-index: 9999;
+}
+
+.architecture {
+    grid-area: descMain;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+.architecture .name {
+    font-size: 80px;
+    color: #2E279D;
+}
+
+.architecture .descMain {
+    font-size: 30px;
+}
+
+.info {
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+.subtitle {
+    font-size: 60px;
+    text-align: center;
+}
+
+.descInfo {
+    text-align: center;
+    font-size: 20px;
+    width: 900px;
+}
+
+.infoTwo {
+    width: 100%;
+    height: 80vh;
+    background-color: #2E279D;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas:
+        "imgService Service"
+    ;
+}
+
+.bgIT {
+    grid-area: imgService;
+    background-image: url(img/bgTwo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.infoIT {
+    padding: 20px;
+}
+
+.subtitle.S {
+    color: #46B3E6;
+}
+
+.services {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: #DFF6F0;
+}
+
+.service {
+    width: 300px;
+    text-align: center;
+}
+
+.imgService {
+    width: 200px;
+    height: 200px;
+}
+
+.comments {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteinerComments {
+    width: 800px;
+    height: 400px;
+    background-color: #2E279D;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.commentSection {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.commentSection.active {
+    display: block;
+}
+
+.comment {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas:
+        "profile name"
+        "profile comment"
+    ;
+}
+
+.profile {
+    grid-area: profile;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.nameClient {
+    grid-area: name;
+    font-size: 30px;
+    position: relative;
+    top: 40%;
+    color: #fff;
+
+}
+
+.commentClient {
+    grid-area: comment;
+    color: #dddddd;
+    font-size: 14px;
+    text-align: justify;
+    width: 100%;
+    height: 100%;
+    padding: 0 30px 0 0;
+}
+
+.btnCommnets {
+    margin-top: 30px;
+    width: 400px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btnComment {
+    background-color: #080080;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btnComment.active {
+    background-color: #46B3E6;
+}
+
+.clients {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.clients div {
+    width: 500px;
+    height: 500px;
+    background-color: #080080;
+    color: #fff;
+    box-shadow: 10px 10px 2px #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.number {
+    font-size: 200px;
+}
+
+.nameSection {
+    font-size: 40px;
+}
+
+footer {
+    background-color: #080080;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+        "contact form"
+        "red red"
+    ;
+}
+
+footer div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.subtitleFooter {
+    font-size: 40px;
+}
+
+.information {
+    grid-area: contact;
+}
+
+.contact {
+    grid-area: form;
+}
+
+.contactUs {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+}
+
+#emailOrPhone {
+    width: 400px;
+    height: 60px;
+    padding: 10px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+}
+
+#submit {
+    width: 200px;
+    height: 60px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+#submit:hover {
+    background-color: #fff;
+    cursor: pointer;
+    color: #080080;
+}
+
+.redes {
+    width: 100%;
+    height: 100%;
+    grid-area: red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.red {
+    text-decoration: none;
+    font-size: 60px;
+    color: #fff;
+}
+
+.copy {
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+}
+
+.copy a {
+    color: #8300ff;
+    text-decoration: none;
+}
+
+@media (max-width:1600px) {
+    .infoTwo {
+        width: 100%;
+        height: 100%;
+    }
+
+    .clients {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        gap: 40px;
+    }
+}
+
+@media (max-width:1100px) {
+
+    main {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "bgMain descMain"
+        ;
+    }
+
+    .architecture {
+        padding: 20px;
+    }
+
+    .architecture .name {
+        font-size: 60px;
+    }
+
+    .architecture .descMain {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 1000px) {
+
+    main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .coverMain {
+        display: none;
+    }
+
+    .architecture {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+    }
+
+    .architecture .name {
+        width: 100%;
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .architecture .descMain {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .infoTwo {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bgIT {
+        width: 100%;
+        height: 600px;
+        background-image: url(img/bgTwo.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .infoIT {
+        padding: 20px;
+    }
+
+    .subtitle.S {
+        color: #46B3E6;
+    }
+
+    .services {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        color: #DFF6F0;
+    }
+
+    .service {
+        width: 300px;
+        text-align: center;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 940px) {
+    .info {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .descInfo {
+        text-align: center;
+        font-size: 12px;
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 880px) {
+
+    .comments {
+        width: 100%;
+        height: 400px;
+    }
+
+    .conteinerComments {
+        width: 600px;
+        height: 300px;
+    }
+
+    .comment {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-areas:
+            "profile name"
+            "profile comment"
+        ;
+    }
+
+    .profile {
+        grid-area: profile;
+        width: 150px;
+        height: 150px;
+    }
+
+    .nameClient {
+        grid-area: name;
+        font-size: 20px;
+        position: relative;
+        top: 40%;
+    }
+
+    .commentClient {
+        grid-area: comment;
+        font-size: 12px;
+    }
+
+    .btnCommnets {
+        margin-top: 20px;
+        width: 200px;
+        height: 30px;
+    }
+
+}
+
+@media (max-width: 640px) {
+
+    .comments {
+        margin-top: 30px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .conteinerComments {
+        width: 100%;
+        height: 400px;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .comment {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .profile {
+        width: 250px;
+        height: 250px;
+    }
+
+    .nameClient {
+        font-size: 20px;
+        position: initial;
+    }
+
+    .commentClient {
+        font-size: 12px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .clients {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .clients div {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .number {
+        font-size: 80px;
+    }
+    
+    .nameSection {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 490px){
+
+    .architecture {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+
+    .architecture .name {
+        width: 100%;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .architecture .descMain {
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .conteinerComments {
+        width: 100%;
+        height: 300px;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .comment {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .nameClient {
+        font-size: 14px;
+    
+    }
+
+    .profile {
+        width: 150px;
+        height: 150px;
+    }
+
+    .commentClient {
+        font-size: 10px;
+        margin: 0;
+    }
+    
+    .contactUs {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        font-size: 20px;
+    }
+
+    .imgService {
+        width: 100px;
+        height: 100px;
+    }
+    
+    #emailOrPhone {
+        width: 250px;
+        height: 40px;
+        font-size: 12px;
+    }
+    
+    #submit {
+        width: 100px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .red {
+        text-decoration: none;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .subtitleFooter {
+        font-size: 20px;
+    }
+
+    .infoIT {
+        padding: 0px;
+    }
+
+}
+
+@media (max-width: 320px){
+    .profile {
+        width: 100px;
+        height: 100px;
+    }
+}
