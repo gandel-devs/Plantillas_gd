@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleNine.css">
+    <title>STYLE NINE</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="nameEnterprise">GANDEL DEVS</h1>
+        <button class="btnMenu">
+            <span class="lines"></span>
+            <span class="lines"></span>
+            <span class="lines"></span>
+        </button>
+    </header>
+
+    <div class="menu">
+        <div class="menuOptions">
+            <a href="" class="menuOption">OPTION 1</a>
+            <a href="" class="menuOption">OPTION 2</a>
+            <a href="" class="menuOption">OPTION 3</a>
+            <a href="" class="menuOption">OPTION 4</a>
+        </div>
+    </div>
+
+    <div class="videoControls">
+        <div class="controls">
+            <button class="back" disabled>
+                <i class="fa-solid fa-backward-step"></i>
+            </button>
+            <button class="playControl" disabled>
+                <i class="fa-solid fa-play"></i>
+            </button>
+            <button class="pauseControl" disabled>
+                <i class="fa-solid fa-pause"></i>
+            </button>
+            <button class="next" disabled>
+                <i class="fa-solid fa-forward-step"></i>
+            </button>
+        </div>
+
+        <div class="progressPage">
+            <div class="progressBar"></div>
+        </div>
+    </div>
+
+    <div class="timer">
+        <p class="clock">00:00 </p>
+        <p class="finish">/ 04:00</p>
+    </div>
+
+    <main class="slide s-1 show">
+        <button class="play">
+            <p>
+                <i class="fa-solid fa-play"></i>
+            </p>
+        </button>
+    </main>
+
+    <section class="slide s-2">
+        <div class="containerTwo">
+            <h1 class="about">ABOUT US</h1>
+            <p class="descAbout">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam maxime odit totam,
+                corporis autem explicabo eligendi quos perspiciatis cupiditate amet sit, quam eaque alias temporibus
+                quidem aspernatur culpa ratione at.</p>
+        </div>
+    </section>
+    <section class="slide s-3">
+        <div class="containerThree">
+            <div class="services">
+                <p class="icon">
+                    <i class="fa-regular fa-image"></i>
+                </p>
+                <br>
+                <p class="nameService">PHOTOS</p>
+
+            </div>
+            <div class="services">
+                <p class="icon">
+                    <i class="fa-solid fa-film"></i>
+                </p>
+                <br>
+                <p class="nameService">VIDEOS</p>
+            </div>
+            <div class="services">
+                <p class="icon">
+                    <i class="fa-solid fa-camera"></i>
+                </p>
+                <br>
+                <p class="nameService">RECORDING</p>
+            </div>
+        </div>
+    </section>
+    <section class="slide s-4">
+        <div class="containerForm">
+            <form>
+                <fieldset>
+                    <legend>CONTACT:</legend>
+                    <label for="username">NAME:</label>
+                    <br>
+                    <input type="text" name="username" id="username" placeholder="DENIS JORGE GANDARILLAS DELGADO" required>
+                    <br>
+                    <label for="email">E-MAIL:</label>
+                    <br>
+                    <input type="email" name="email" id="email" placeholder="gandel.devs@gmail.com" required>
+                    <br>
+                    <label for="service">SERVICE:</label>
+                    <br>
+                    <select name="service" id="service">
+                        <option value="1">PHOTO</option>
+                        <option value="2">VIDEO</option>
+                        <option value="3">RECORDING</option>
+                    </select>
+                </fieldset>
+                <input type="submit" value="SUBMIT">
+            </form>
+        </div>
+    </section>
+    <footer class="slide s-5">
+        <div class="containerFooter">
+            <div class="contacts">
+                <h2 class="subtitle">CONTACT:</h2>
+                <h3 class="subtitulo">E-mail:</h3>
+                <address class="email">gandel.devs@gmail.com</address>
+                <h3 class="subtitulo">Phone:</h3>
+                <address class="numero">+591 63505702</address>
+                <h3 class="subtitulo">Location:</h3>
+                <address class="lugar">Av. America entre Av. Potosi</address>
+            </div>
+            <div class="redes">
+                <a href="" class="red"><i class="fa-brands fa-facebook"></i></a>
+                <a href="" class="red"><i class="fa-brands fa-instagram"></i></a>
+                <a href="" class="red"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="" class="red"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/db234e9712.js" crossorigin="anonymous"></script>
+    <script src="menu.js"></script>
+    <script src="Controls.js"></script>
+
+</body>
+
+</html>

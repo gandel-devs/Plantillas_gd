@@ -1,0 +1,751 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    background-color: #FFD369;
+    border: 4px solid #000;
+    border-radius: 40px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Righteous', cursive;
+    background-color: #000;
+    overflow-y: hidden;
+}
+
+/*HEADER-----------------------------------------------*/
+
+header {
+    background-color: #FFD369;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.5s;
+    position: fixed;
+    z-index: 10000;
+}
+
+.btnMenu {
+    background-color: transparent;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.lines {
+    display: block;
+    background-color: #000;
+    width: 40px;
+    height: 2px;
+    margin: 10px auto;
+}
+
+.header.active {
+    background-color: #000;
+    color: #FFD369;
+}
+
+.btnMenu.active {
+    background-color: #000;
+    border: 2px solid #FFD369;
+}
+
+.btnMenu.active .lines {
+    background-color: #FFD369;
+}
+
+.menu {
+    display: none;
+    background-color: #000;
+    width: 100%;
+    height: calc(100vh - 80px);
+    position: absolute;
+    top: 80px;
+    transition: all 0.5s;
+    z-index: 9999;
+}
+
+.menu.active {
+    display: block;
+}
+
+.menuOptions {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menuOption {
+    text-decoration: none;
+    color: #FFD369;
+    display: block;
+    width: 200px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+}
+
+.menuOption:hover {
+    background-color: #FFD369;
+    color: #000;
+}
+
+/*SLIDES-----------------------------------------------*/
+
+.slide.s-1.show,
+.slide.s-2.show,
+.slide.s-3.show,
+.slide.s-4.show,
+.slide.s-5.show {
+    display: block;
+    width: 100%;
+    height: 100vh;
+}
+
+.slide.s-1,
+.slide.s-2,
+.slide.s-3,
+.slide.s-4,
+.slide.s-5 {
+    display: none;
+}
+
+/*COVER-----------------------------------------------*/
+
+main {
+    background-image: url(img/bgVideo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.play {
+    width: 150px;
+    height: 150px;
+    background-color: #FFD369;
+    border-radius: 50%;
+    border: 4px solid #000;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.play.run {
+    display: none;
+}
+
+.play:hover {
+    background-color: #d1ad5a;
+}
+
+.play p {
+    color: #000;
+    font-size: 80px;
+    line-height: 150px;
+}
+
+/*CONTROLS-----------------------------------------------*/
+
+.videoControls {
+    background-color: rgba(0, 0, 0, 0.527);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.progressPage {
+    background-color: #fff;
+    width: 800px;
+    height: 10px;
+    border-radius: 20px;
+}
+
+.progressBar {
+    background-color: #FFD369;
+    width: 1.5%;
+    height: 100%;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+.progressBar.p-2 {
+    width: 25%;
+}
+
+.progressBar.p-3 {
+    width: 50%;
+}
+
+.progressBar.p-4 {
+    width: 75%;
+}
+
+.progressBar.p-5 {
+    width: 100%;
+}
+
+.timer {
+    position: absolute;
+    bottom: 15px;
+    right: 10%;
+    color: #fff;
+}
+
+.timer p {
+    display: inline;
+    transition: all 0.5s;
+}
+
+.controls {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.playControl,
+.pauseControl,
+.back,
+.next {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #ffffff40;
+}
+
+.pauseControl,
+.playControl {
+    display: none;
+}
+
+.playControl.active,
+.pauseControl.active,
+.back.active,
+.next.active {
+    color: #ffffff;
+}
+
+.pauseControl.active,
+.playControl.active {
+    display: block;
+}
+
+/*SLIDE 2-----------------------------------------------*/
+
+.slide.s-2.show {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/bgOne.gif);
+    background-position: center;
+    background-size: cover;
+}
+
+.containerTwo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about {
+    font-size: 60px;
+}
+
+.descAbout {
+    font-size: 20px;
+    width: 800px;
+    text-align: center;
+}
+
+/*SLIDE 3-----------------------------------------------*/
+
+.slide.s-3.show {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/editVideos.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.containerThree {
+    background-color: #00000089;
+    border-radius: 40px;
+    width: 1200px;
+    height: 400px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.services {
+    cursor: pointer;
+    background-color: #FFD369;
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.services .icon {
+    text-decoration: none;
+    font-size: 200px;
+    transition: all 0.5s;
+}
+
+.services .nameService {
+    display: none;
+    font-size: 30px;
+}
+
+.services:hover .icon {
+    font-size: 100px;
+}
+
+.services:hover .nameService {
+    display: block;
+}
+
+/*SLIDE 4-----------------------------------------------*/
+
+.slide.s-4.show {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/bgVide.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.containerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+form {
+    background-color: #ffffff86;
+    width: 600px;
+    height: 450px;
+    padding: 20px;
+    border-radius: 40px;
+}
+
+fieldset {
+    border: 2px solid #000;
+    border-radius: 40px;
+    background-color: #FFD369;
+    padding: 20px;
+}
+
+legend {
+    font-size: 30px;
+    text-align: center;
+}
+
+fieldset input,
+fieldset select {
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    border: 2px solid #000;
+    color: #000;
+    font-family: 'Righteous', cursive;
+    border-radius: 40px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+option {
+    font-size: 16px;
+    text-align: center;
+}
+
+input[type=submit] {
+    background-color: #FFD369;
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    border-radius: 40px;
+    border: 2px solid #000;
+    font-size: 20px;
+}
+
+/*FOOTER-----------------------------------------------*/
+
+.slide.s-5.show {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/bgOne.gif);
+    background-position: center;
+    background-size: cover;
+}
+
+.containerFooter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contacts {
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #000;
+}
+
+.subtitle {
+    font-size: 60px;
+}
+
+.subtitulo {
+    font-size: 30px;
+}
+
+.contacts address {
+    font-size: 20px;
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.red {
+    font-size: 200px;
+    text-decoration: none;
+    color: #000;
+}
+
+@media (max-width: 1330px) {
+
+    /*CONTROLS-----------------------------------------------*/
+
+    .progressPage {
+        width: 600px;
+        height: 10px;
+    }
+
+}
+
+@media (max-width: 1220px) {
+
+    /*SLIDE 3-----------------------------------------------*/
+
+    .containerThree {
+        width: 800px;
+        height: 400px;
+    }
+
+    .services {
+        width: 200px;
+        height: 200px;
+    }
+
+    .services .icon {
+        font-size: 100px;
+    }
+
+    .services:hover .icon {
+        font-size: 60px;
+    }
+
+    .services .nameService {
+        display: none;
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 1100px) {
+
+    /*FOOTER-----------------------------------------------*/
+
+    .containerFooter {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .contacts {
+        width: 300px;
+        height: 300px;
+    }
+
+    .subtitle {
+        font-size: 40px;
+    }
+
+    .subtitulo {
+        font-size: 20px;
+    }
+
+    .contacts address {
+        font-size: 16px;
+    }
+
+    .redes {
+        width: 300px;
+        height: 300px;
+    }
+
+    .red {
+        font-size: 100px;
+    }
+
+}
+
+@media (max-width: 1050px) {
+
+    /*CONTROLS-----------------------------------------------*/
+
+    .videoControls {
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-areas:
+            "controls timer"
+            "progress progress"
+        ;
+        gap: 20px;
+    }
+
+    .progressPage {
+        grid-area: progress;
+        width: 80%;
+        margin: auto;
+    }
+
+    .timer {
+        grid-area: timer;
+    }
+
+    .timer p {
+        font-size: 14px;
+    }
+
+    .controls {
+        grid-area: controls;
+        margin: auto;
+    }
+
+    .playControl,
+    .pauseControl,
+    .back,
+    .next {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+@media (max-width: 810px) {
+
+    /*SLIDE 2-----------------------------------------------*/
+
+    .about {
+        font-size: 40px;
+    }
+
+    .descAbout {
+        font-size: 16px;
+        width: 400px;
+    }
+
+    /*SLIDE 3-----------------------------------------------*/
+
+    .containerThree {
+        width: 600px;
+        height: 600px;
+    }
+
+    .services {
+        width: 200px;
+        height: 200px;
+    }
+
+    .services .icon {
+        font-size: 100px;
+    }
+
+    .services:hover .icon {
+        font-size: 60px;
+    }
+
+    .services .nameService {
+        display: none;
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 630px) {
+
+    /*SLIDE 3-----------------------------------------------*/
+
+    .containerThree {
+        width: 150px;
+        height: 500px;
+    }
+
+    .services {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .services .icon {
+        font-size: 60px;
+    }
+
+    .services:hover .icon {
+        font-size: 30px;
+    }
+
+    .services .nameService {
+        display: none;
+        font-size: 12px;
+    }
+
+    /*SLIDE 4-----------------------------------------------*/
+
+    form {
+        width: 400px;
+        height: 380px;
+    }
+
+    legend {
+        font-size: 24px;
+    }
+
+    fieldset input,
+    fieldset select {
+        width: 100%;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    option {
+        font-size: 12px;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    /*FOOTER-----------------------------------------------*/
+
+    .contacts {
+        width: 100%;
+        height: 300px;
+    }
+
+    .subtitle {
+        font-size: 40px;
+    }
+
+    .subtitulo {
+        font-size: 20px;
+    }
+
+    .contacts address {
+        font-size: 16px;
+    }
+
+    .redes {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .red {
+        font-size: 50px;
+    }
+
+}
+
+@media (max-width: 430px){
+
+    /*SLIDE 2-----------------------------------------------*/
+
+    .about {
+        font-size: 40px;
+    }
+
+    .descAbout {
+        font-size: 12px;
+        width: 100%;
+        padding: 20px;
+    }
+
+}
